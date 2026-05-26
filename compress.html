@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comprimir PDF - UniPDF</title>
+  <meta name="description" content="Página demonstrativa da ferramenta de compressão de PDF do projeto UniPDF." />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand"><svg viewBox="0 0 64 64" aria-hidden="true" class="brand-mark"><rect x="10" y="8" width="30" height="40" rx="8" fill="none" stroke="currentColor" stroke-width="4"/><path d="M24 20h20c5 0 10 4 10 10v16c0 5-5 10-10 10H24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M20 22h10M20 30h16M20 38h12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg><span>UniPDF</span></a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="index.html">Início</a>
+        <a href="merge.html">Juntar</a>
+        <a href="convert.html">Converter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Ferramenta demonstrativa</p>
+        <h1>Comprimir PDF</h1>
+        <p>Exemplo visual para mostrar redução de tamanho de arquivos antes de enviar trabalhos acadêmicos.</p>
+      </div>
+    </section>
+
+    <section class="container demo-layout">
+      <article class="upload-box">
+        <span class="badge">Arquivo</span>
+        <h2>Documento original</h2>
+        <ul class="file-list">
+          <li><span>TCC-Parcial.pdf</span><strong>9,8 MB</strong></li>
+        </ul>
+        <div class="action-row">
+          <button class="btn btn-primary" type="button" data-run-demo>Comprimir arquivo</button>
+          <a class="btn btn-secondary" href="index.html">Voltar</a>
+        </div>
+      </article>
+
+      <aside class="result-box">
+        <span class="badge">Resultado</span>
+        <h2>Estimativa final</h2>
+        <p>Após a demonstração, o arquivo é exibido com menor tamanho para ilustrar o processo.</p>
+        <div class="fake-progress"><span data-progress style="width:58%"></span></div>
+        <p class="status" data-status>Tamanho estimado após compressão: 4,1 MB.</p>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
