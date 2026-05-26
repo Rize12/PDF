@@ -21,7 +21,6 @@
   --text-sm: clamp(0.85rem, 0.8rem + 0.25vw, 0.95rem);
   --text-base: clamp(0.95rem, 0.9rem + 0.25vw, 1.05rem);
   --text-lg: clamp(1.1rem, 1rem + 0.75vw, 1.45rem);
-  --text-xl: clamp(1.6rem, 1.3rem + 1.5vw, 2.4rem);
   --text-2xl: clamp(2.1rem, 1.4rem + 2.5vw, 3.4rem);
 
   --content-width: 1120px;
@@ -36,7 +35,7 @@ body {
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--color-text);
-  background: #05030b; /* sem glow forte */
+  background: #05030b;
   min-height: 100vh;
 }
 
@@ -142,17 +141,6 @@ button, input { font: inherit; }
   margin-bottom: 0.8rem;
 }
 
-.tool-card-disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.tool-card-disabled:hover {
-  transform: none;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
-  border-color: var(--color-border);
-}
-
 /* PAGE HERO */
 
 .page-hero {
@@ -161,6 +149,9 @@ button, input { font: inherit; }
 
 .page-hero h1 {
   font-size: var(--text-2xl);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .demo-label {
@@ -270,8 +261,6 @@ button, input { font: inherit; }
   margin-top: 1.1rem;
 }
 
-/* PROGRESS */
-
 .fake-progress {
   margin-top: 1.1rem;
   width: 100%;
@@ -285,7 +274,7 @@ button, input { font: inherit; }
 .fake-progress span {
   display: block;
   height: 100%;
-  width: 0; /* começa vazia */
+  width: 0;
   background: linear-gradient(90deg, var(--color-accent), var(--color-accent-strong));
   transition: width 0.2s ease-out;
 }
@@ -296,18 +285,10 @@ button, input { font: inherit; }
   color: var(--color-muted);
 }
 
-/* RESPONSIVO */
-
-@media (max-width: 900px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .demo-layout {
-    grid-template-columns: 1fr;
-  }
+.status-note {
+  margin-top: 0.5rem;
+  font-size: var(--text-xs);
+  color: var(--color-muted);
 }
 
 .file-remove-btn {
@@ -322,4 +303,18 @@ button, input { font: inherit; }
 
 .file-remove-btn:hover {
   color: var(--color-accent);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .demo-layout {
+    grid-template-columns: 1fr;
+  }
 }

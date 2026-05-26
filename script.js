@@ -1,8 +1,7 @@
 const selectedFilesByTool = {
   merge: [],
   compress: [],
-  convert: [],
-  pdfword: []
+  convert: []
 };
 
 function formatBytes(bytes) {
@@ -300,22 +299,6 @@ document.addEventListener("DOMContentLoaded", () => {
         await compressPdfDemo(files, status, progress);
       } else if (tool === "convert") {
         await convertImagesToPdf(files, status, progress);
-      } else if (tool === "pdfword") {
-        // DEMO: apenas simula processamento
-        status.textContent =
-          "Demo: aqui o PDF seria convertido para Word em um backend.";
-        let pct = 10;
-        progress.style.width = "10%";
-        const step = setInterval(() => {
-          pct += 20;
-          if (pct >= 100) {
-            pct = 100;
-            clearInterval(step);
-            status.textContent =
-              "Conversão demo concluída. (Sem arquivo real gerado)";
-          }
-          progress.style.width = pct + "%";
-        }, 150);
       }
     });
   });
